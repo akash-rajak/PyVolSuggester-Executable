@@ -1,4 +1,4 @@
-## ✔ PyVOlSuggester Executable
+## ✔ PyVolSuggester Executable
 - Python tool to provide suggestion on volume at which the music audio file needs to be played for better experience and feeling.
 - In backend, it extracts various generic features for particular audio and analyze among them and provide feedback on volumne on it.  
 - This tools helps in maintaining goob vibes along the music playout.
