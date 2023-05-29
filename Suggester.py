@@ -1,17 +1,17 @@
 
-import subprocess
-
-my_libraries = ['time', 'pyaudio', 'pynput', 'wave', 'numpy', 'matplotlib', 'librosa', 'mutagen', 'tkinter', 'pathlib']
-for module in my_libraries:
-    try:
-        __import__(module)
-    except ImportError:
-        subprocess.check_call(["pip", "install", module])
+# import subprocess
+#
+# my_libraries = ['time', 'pyaudio', 'pynput', 'wave', 'numpy', 'matplotlib', 'librosa', 'mutagen', 'tkinter', 'pathlib']
+# for module in my_libraries:
+#     try:
+#         __import__(module)
+#     except ImportError:
+#         subprocess.check_call(["pip", "install", module])
 
 
 ## importing necessary library
 from tkinter import filedialog, Tk
-from playsound import playsound
+# from playsound import playsound
 import pyaudio
 import time
 from pynput import keyboard
@@ -53,8 +53,8 @@ def mp3towav():
     print("\nConverted .mp3 to .wav file and saved to same location from where .mp3 file selected...")
     print("Created : " + base_file_name + "_wav" + ".wav")
     # print(wav_file)
-    # subprocess.call(['C:/Users/MAQ/Path_programs/ffmpeg.exe', '-i', file, wav_file])
-    subprocess.call(['C:/Users/aakas/PATH_Programs/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe', '-i', file, wav_file])
+    subprocess.call(['C:/Users/MAQ/Path_programs/ffmpeg.exe', '-i', file, wav_file])
+    # subprocess.call(['C:/Users/aakas/PATH_Programs/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe', '-i', file, wav_file])
 
     ## creating folder for saving output plot
     new_dir = pathlib.Path(dir_name, base_file_name + " - Plot")
